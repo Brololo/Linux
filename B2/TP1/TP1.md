@@ -101,7 +101,7 @@
   - fichier `/etc/hosts`
 
         Sur node1.tp1.b2 : nano /etc/hosts > 192.168.1.12 node2
-        Sur node2.tp1.b2 : nano /stc/hosts > 192.168.1.11 node1
+        Sur node2.tp1.b2 : nano /etc/hosts > 192.168.1.11 node1
 
 - un utilisateur administrateur est créé sur les deux machines (il peut exécuter des commandes `sudo` en tant que `root`)
 
