@@ -149,6 +149,12 @@ ExecStop=+/usr/sbin/firewall-cmd --reload
            └─1444 /usr/bin/python3 -m http.server 19999
 ```
 
+- faites en sorte que le service s'allume au démarrage de la machine
+
+```
+systemctl enable server.service
+```
+
 - prouver que le serveur web est bien fonctionnel
 
 ```
