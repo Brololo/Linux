@@ -127,9 +127,12 @@ Description=Start web server Python3
 [Service]
 User=nginx_user
 Environment="PORT=19999"
-ExecStartPre=+/usr/sbin/firewalld-cmd --add-port=${PORT}/tcp --permanent
+ExecStartPre=+/usr/sbin/firewall-cmd --add-port=${PORT}/tcp --permanent
+ExecStartPre=+/usr/sbin/firewall-cmd --reload
 ExecStart=/usr/bin/python3 -m http.server ${PORT}
-ExecStop=+/usr/sbin/firewalld-cmd --remove-port=${PORT}/tcp --permanent
+ExecStop=+/usr/sbin/firewall-cmd --remove-port=${PORT}/tcp --permanent
+ExecStop=+/usr/sbin/firewall-cmd --reload
+
 ```
 
 🌞 Lancer le service
