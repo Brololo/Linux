@@ -153,6 +153,11 @@ ExecStop=+/usr/sbin/firewall-cmd --reload
 
 ```
 systemctl enable server.service
+
+je rajoute aussi ses 2 lignes à la fin de mon fichier server.service
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 - prouver que le serveur web est bien fonctionnel
